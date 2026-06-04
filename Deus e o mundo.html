@@ -1,0 +1,85 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deus e o mundo.md | Exported</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .theme-toggle {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        background: var(--bgColor-muted);
+        color: var(--fgColor-muted);
+        border-radius: 8px;
+        border: 1px solid var(--borderColor-default);
+        padding: 6px 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      /* Computador */
+      @media (min-width: 768px) {
+        .theme-toggle {
+          top: 45px;
+          right: 230px;
+        }
+      }
+
+      /* Celular */
+      @media (max-width: 767px) {
+        .theme-toggle {
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="markdown-body" data-theme="light">
+    <button id="theme-toggle" type="button" class="theme-toggle">Alternar tema</button>
+    <h4 data-heading="**Deus e o mundo**" dir="auto" id="**Deus-e-o-mundo**"><strong>Deus e o mundo</strong></h4>
+<p dir="auto">A criação dos céus e da terra<br>
+O pecado humano e a ruína do mundo de Deus<br>
+O dilúvio universal<br>
+A tabela das nações</p>
+    <script>
+      (function () {
+        var STORAGE_KEY = "export-theme";
+        var LEGACY_KEY = "theme";
+        var body = document.body;
+        var button = document.getElementById("theme-toggle");
+        if (!body || !button) return;
+
+        function loadSavedTheme() {
+          try {
+            var saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+            localStorage.setItem(LEGACY_KEY, theme);
+          } catch (e) {}
+        }
+
+        function applyTheme(theme) {
+          body.setAttribute("data-theme", theme);
+          saveTheme(theme);
+        }
+
+        var currentTheme = loadSavedTheme();
+        applyTheme(currentTheme);
+
+        button.addEventListener("click", function () {
+          currentTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(currentTheme);
+        });
+      })();
+    </script>
+  </body>
+</html>

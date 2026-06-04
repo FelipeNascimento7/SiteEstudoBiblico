@@ -1,0 +1,113 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações_Filipenses_1.md | Exported</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .theme-toggle {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        background: var(--bgColor-muted);
+        color: var(--fgColor-muted);
+        border-radius: 8px;
+        border: 1px solid var(--borderColor-default);
+        padding: 6px 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      /* Computador */
+      @media (min-width: 768px) {
+        .theme-toggle {
+          top: 45px;
+          right: 230px;
+        }
+      }
+
+      /* Celular */
+      @media (max-width: 767px) {
+        .theme-toggle {
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="markdown-body" data-theme="light">
+    <button id="theme-toggle" type="button" class="theme-toggle">Alternar tema</button>
+    <p dir="auto">1Paulo e Timóteo, servos de Cristo Jesus,<br>
+a todos os santos em Cristo Jesus que estão em Filipos, com os bispos e diáconos:</p>
+<p dir="auto">2A vocês, graça e paz da parte de Deus nosso Pai e do Senhor Jesus Cristo.</p>
+<p dir="auto">Acção de graças e oração<br>
+3Agradeço a meu Deus toda vez que me lembro de vocês.</p>
+<p dir="auto">4Em todas as minhas orações em favor de vocês, sempre oro com alegria</p>
+<p dir="auto">5por causa da cooperação que vocês têm dado ao evangelho desde o primeiro dia até agora.</p>
+<p dir="auto">6Estou convencido de que aquele que começou boa obra em vocês, vai completá-la até o dia de Cristo Jesus.</p>
+<p dir="auto">7É justo que eu assim me sinta a respeito de todos vocês, uma vez que os tenho em meu coração, pois, quer nas correntes que me prendem, quer defendendo e confirmando o evangelho, todos vocês participam comigo da graça de Deus.</p>
+<p dir="auto">8Deus é minha testemunha de como tenho saudade de todos vocês, com a profunda afeição de Cristo Jesus.</p>
+<p dir="auto">9Esta é a minha oração: Que o amor de vocês aumente cada vez mais em conhecimento e em toda a percepção,</p>
+<p dir="auto">10para discernirem o que é melhor, a fim de serem puros e irrepreensíveis até o dia de Cristo,</p>
+<p dir="auto">11cheios do fruto da justiça, fruto que vem por meio de Jesus Cristo, para glória e louvor de Deus.</p>
+<p dir="auto">A prisão de Paulo e o avanço do evangelho<br>
+12Quero que saibam, irmãos, que aquilo que me aconteceu tem, ao contrário, servido para o progresso do evangelho.</p>
+<p dir="auto">13Como resultado, tornou-se evidente a toda a guarda do palácio e a todos os demais que estou na prisão por causa de Cristo.</p>
+<p dir="auto">14E os irmãos, em sua maioria, motivados no Senhor pela minha prisão, estão anunciando a palavra com maior determinação e destemor.</p>
+<p dir="auto">15É verdade que alguns pregam Cristo por inveja e rivalidade, mas outros o fazem de boa vontade.</p>
+<p dir="auto">16Estes o fazem por amor, sabendo que aqui me encontro para a defesa do evangelho.</p>
+<p dir="auto">17Aqueles pregam Cristo por ambição egoísta, sem sinceridade, pensando que me podem causar sofrimento enquanto estou preso.</p>
+<p dir="auto">18Mas que importa? O importante é que de qualquer forma, seja por motivos falsos ou verdadeiros, Cristo está sendo pregado, e por isso me alegro. De fato, continuarei a alegrar-me,</p>
+<p dir="auto">19pois sei que o que me aconteceu resultará em minha libertação, graças às orações de vocês e ao auxílio do Espírito de Jesus Cristo.</p>
+<p dir="auto">20Aguardo ansiosamente e espero que em nada serei envergonhado. Ao contrário, com toda a determinação de sempre, também agora Cristo será engrandecido em meu corpo, quer pela vida, quer pela morte;</p>
+<p dir="auto">21porque para mim o viver é Cristo e o morrer é lucro.</p>
+<p dir="auto">22Caso continue vivendo no corpo, terei fruto do meu trabalho. E já não sei o que escolher!</p>
+<p dir="auto">23Estou pressionado dos dois lados: desejo partir e estar com Cristo, o que é muito melhor;</p>
+<p dir="auto">24contudo, é mais necessário, por causa de vocês, que eu permaneça no corpo.</p>
+<p dir="auto">25Convencido disso, sei que vou permanecer e continuar com todos vocês, para o seu progresso e alegria na fé,</p>
+<p dir="auto">26a fim de que, pela minha presença, outra vez a exultação de vocês em Cristo Jesus transborde por minha causa.</p>
+<p dir="auto">27Não importa o que aconteça, exerçam a sua cidadania de maneira digna do evangelho de Cristo, para que assim, quer eu vá e os veja, quer apenas ouça a seu respeito em minha ausência, fique eu sabendo que vocês permanecem firmes num só espírito, lutando unânimes pela fé evangélica,</p>
+<p dir="auto">28sem de forma alguma deixar-se intimidar por aqueles que se opõem a vocês. Para eles isso é sinal de destruição, mas para vocês, de salvação, e isso da parte de Deus;</p>
+<p dir="auto">29pois a vocês foi dado o privilégio de não apenas crer em Cristo, mas também de sofrer por ele,</p>
+<p dir="auto">30já que estão passando pelo mesmo combate que me viram enfrentar e agora ouvem que ainda enfrento.</p>
+    <script>
+      (function () {
+        var STORAGE_KEY = "export-theme";
+        var LEGACY_KEY = "theme";
+        var body = document.body;
+        var button = document.getElementById("theme-toggle");
+        if (!body || !button) return;
+
+        function loadSavedTheme() {
+          try {
+            var saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+            localStorage.setItem(LEGACY_KEY, theme);
+          } catch (e) {}
+        }
+
+        function applyTheme(theme) {
+          body.setAttribute("data-theme", theme);
+          saveTheme(theme);
+        }
+
+        var currentTheme = loadSavedTheme();
+        applyTheme(currentTheme);
+
+        button.addEventListener("click", function () {
+          currentTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(currentTheme);
+        });
+      })();
+    </script>
+  </body>
+</html>

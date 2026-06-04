@@ -1,0 +1,103 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnicas_de_Interpretaçõa_Bíblica.md | Exported</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .theme-toggle {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        background: var(--bgColor-muted);
+        color: var(--fgColor-muted);
+        border-radius: 8px;
+        border: 1px solid var(--borderColor-default);
+        padding: 6px 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      /* Computador */
+      @media (min-width: 768px) {
+        .theme-toggle {
+          top: 45px;
+          right: 230px;
+        }
+      }
+
+      /* Celular */
+      @media (max-width: 767px) {
+        .theme-toggle {
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="markdown-body" data-theme="light">
+    <button id="theme-toggle" type="button" class="theme-toggle">Alternar tema</button>
+    <p dir="auto">Claro. As <strong>20 técnicas de interpretação bíblica</strong> são:</p>
+<ol>
+<li dir="auto"><strong>Técnica do contexto</strong></li>
+<li dir="auto"><strong>Técnica histórico-cultural</strong></li>
+<li dir="auto"><strong>Técnica gramatical</strong></li>
+<li dir="auto"><strong>Técnica literária</strong></li>
+<li dir="auto"><strong>Técnica de comparação bíblica</strong></li>
+<li dir="auto"><strong>Técnica da intenção do autor</strong></li>
+<li dir="auto"><strong>Técnica da análise de palavras</strong></li>
+<li dir="auto"><strong>Técnica de observar repetições</strong></li>
+<li dir="auto"><strong>Técnica de identificar figuras de linguagem</strong></li>
+<li dir="auto"><strong>Técnica de distinguir descrição e prescrição</strong></li>
+<li dir="auto"><strong>Técnica de distinguir promessa, princípio e mandamento</strong></li>
+<li dir="auto"><strong>Técnica cristocêntrica</strong></li>
+<li dir="auto"><strong>Técnica canônica</strong></li>
+<li dir="auto"><strong>Técnica de progressão da revelação</strong></li>
+<li dir="auto"><strong>Técnica de análise teológica</strong></li>
+<li dir="auto"><strong>Técnica de aplicação</strong></li>
+<li dir="auto"><strong>Técnica de leitura em várias traduções</strong></li>
+<li dir="auto"><strong>Técnica de perguntas ao texto</strong></li>
+<li dir="auto"><strong>Técnica de estrutura do texto</strong></li>
+<li dir="auto"><strong>Técnica de evitar eisegese</strong></li>
+</ol>
+    <script>
+      (function () {
+        var STORAGE_KEY = "export-theme";
+        var LEGACY_KEY = "theme";
+        var body = document.body;
+        var button = document.getElementById("theme-toggle");
+        if (!body || !button) return;
+
+        function loadSavedTheme() {
+          try {
+            var saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+            localStorage.setItem(LEGACY_KEY, theme);
+          } catch (e) {}
+        }
+
+        function applyTheme(theme) {
+          body.setAttribute("data-theme", theme);
+          saveTheme(theme);
+        }
+
+        var currentTheme = loadSavedTheme();
+        applyTheme(currentTheme);
+
+        button.addEventListener("click", function () {
+          currentTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(currentTheme);
+        });
+      })();
+    </script>
+  </body>
+</html>
