@@ -1,0 +1,97 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>36_Sofonias.md | Exported</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .theme-toggle {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        background: var(--bgColor-muted);
+        color: var(--fgColor-muted);
+        border-radius: 8px;
+        border: 1px solid var(--borderColor-default);
+        padding: 6px 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      /* Computador */
+      @media (min-width: 768px) {
+        .theme-toggle {
+          top: 45px;
+          right: 230px;
+        }
+      }
+
+      /* Celular */
+      @media (max-width: 767px) {
+        .theme-toggle {
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="markdown-body" data-theme="light">
+    <button id="theme-toggle" type="button" class="theme-toggle">Alternar tema</button>
+    <h4 data-heading="[[Biblia_de_Estudo|&lt; Todos os Livros]]" dir="auto" id="[[Biblia_de_Estudo|&lt;-Todos-os-Livros]]"><a data-tooltip-position="top" aria-label="Biblia_de_Estudo" data-href="Biblia_de_Estudo" href="Biblia_de_Estudo" class="internal-link" rel="noopener nofollow">&lt; Todos os Livros</a></h4>
+<h2 data-heading="SOFONIAS" dir="auto" id="SOFONIAS">SOFONIAS</h2>
+<h3 data-heading="| [[Sofonias_1|1]] | [[Sofonias_2|2]] | [[Sofonias_3|3]] |" dir="auto" id="|-[[Sofonias_1|1]]-|-[[Sofonias_2|2]]-|-[[Sofonias_3|3]]-|">| <a data-tooltip-position="top" aria-label="Sofonias_1" data-href="Sofonias_1" href="Sofonias_1" class="internal-link" rel="noopener nofollow">1</a> | <a data-tooltip-position="top" aria-label="Sofonias_2" data-href="Sofonias_2" href="Sofonias_2" class="internal-link" rel="noopener nofollow">2</a> | <a data-tooltip-position="top" aria-label="Sofonias_3" data-href="Sofonias_3" href="Sofonias_3" class="internal-link" rel="noopener nofollow">3</a> |</h3>
+<p dir="auto"><strong>Tema:</strong> Restauração divina</p>
+<p dir="auto"><em>"O SENHOR, seu Deus, está no meio de vocês; Ele é poderoso para salvar. Ele se alegrará sobre vocês com cânticos."</em></p>
+<p dir="auto"><em>(Sofonias 3:17)</em></p>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="36_Sofonias_Visao_Geral_BSB" data-href="36_Sofonias_Visao_Geral_BSB" href="36_Sofonias_Visao_Geral_BSB" class="internal-link" rel="noopener nofollow">Visão Geral BSB</a></strong></p>
+<p dir="auto">Sofonias adverte Judá sobre o julgamento que viria por causa da idolatria, da corrupção e da perversidade. O livro apresenta o Dia do SENHOR como um período de ira divina sobre Jerusalém e as nações, convocando o povo ao arrependimento. Ao final, promete a purificação, a restauração e a bênção de um remanescente fiel.</p>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="36_Sofonias_Visao_Geral_Willmington" data-href="36_Sofonias_Visao_Geral_Willmington" href="36_Sofonias_Visao_Geral_Willmington" class="internal-link" rel="noopener nofollow">Visão Geral Willmington</a></strong></p>
+<p dir="auto">Este livro anuncia a futura destruição de Jerusalém pelos babilônios, mas termina com uma gloriosa promessa de purificação e restauração de Israel. Sofonias, descendente do rei Ezequias, apresenta tanto as más notícias do julgamento quanto as boas notícias da salvação messiânica e do futuro reinado de Deus.</p>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="36_Sofonias_Resumo_por_Eventos" data-href="36_Sofonias_Resumo_por_Eventos" href="36_Sofonias_Resumo_por_Eventos" class="internal-link" rel="noopener nofollow">Resumo por Eventos</a></strong></p>
+<ol>
+<li dir="auto"><strong>Julgamento sobre Jerusalém (1:1–2:3)</strong></li>
+<li dir="auto"><strong>Julgamento sobre as nações e Jerusalém (2:4–3:8)</strong></li>
+<li dir="auto"><strong>Esperança para as nações e Jerusalém (3:9–20)</strong></li>
+</ol>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="35_Habacuque" data-href="35_Habacuque" href="35_Habacuque" class="internal-link" rel="noopener nofollow">Habacuque &lt; VOLTAR</a> | <a data-tooltip-position="top" aria-label="37_Ageu" data-href="37_Ageu" href="37_Ageu" class="internal-link" rel="noopener nofollow">AVANÇAR &gt; Ageu</a></strong></p>
+    <script>
+      (function () {
+        var STORAGE_KEY = "export-theme";
+        var LEGACY_KEY = "theme";
+        var body = document.body;
+        var button = document.getElementById("theme-toggle");
+        if (!body || !button) return;
+
+        function loadSavedTheme() {
+          try {
+            var saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+            localStorage.setItem(LEGACY_KEY, theme);
+          } catch (e) {}
+        }
+
+        function applyTheme(theme) {
+          body.setAttribute("data-theme", theme);
+          saveTheme(theme);
+        }
+
+        var currentTheme = loadSavedTheme();
+        applyTheme(currentTheme);
+
+        button.addEventListener("click", function () {
+          currentTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(currentTheme);
+        });
+      })();
+    </script>
+  </body>
+</html>

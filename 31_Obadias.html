@@ -1,0 +1,96 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31_Obadias.md | Exported</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .theme-toggle {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        background: var(--bgColor-muted);
+        color: var(--fgColor-muted);
+        border-radius: 8px;
+        border: 1px solid var(--borderColor-default);
+        padding: 6px 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      /* Computador */
+      @media (min-width: 768px) {
+        .theme-toggle {
+          top: 45px;
+          right: 230px;
+        }
+      }
+
+      /* Celular */
+      @media (max-width: 767px) {
+        .theme-toggle {
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="markdown-body" data-theme="light">
+    <button id="theme-toggle" type="button" class="theme-toggle">Alternar tema</button>
+    <h4 data-heading="[[Biblia_de_Estudo|&lt; Todos os Livros]]" dir="auto" id="[[Biblia_de_Estudo|&lt;-Todos-os-Livros]]"><a data-tooltip-position="top" aria-label="Biblia_de_Estudo" data-href="Biblia_de_Estudo" href="Biblia_de_Estudo" class="internal-link" rel="noopener nofollow">&lt; Todos os Livros</a></h4>
+<h2 data-heading="OBADIAS" dir="auto" id="OBADIAS">OBADIAS</h2>
+<h3 data-heading="| [[Obadias_1|1]] |" dir="auto" id="|-[[Obadias_1|1]]-|">| <a data-tooltip-position="top" aria-label="Obadias_1" data-href="Obadias_1" href="Obadias_1" class="internal-link" rel="noopener nofollow">1</a> |</h3>
+<p dir="auto"><strong>Tema:</strong> O julgamento de Edom<br>
+<em>"Porque o Dia do SENHOR está próximo para todas as nações. Como você fez, assim lhe será feito; a sua recompensa cairá sobre a sua própria cabeça."</em><br>
+<em>(Obadias 1:15)</em></p>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="31_Obadias_Visao_Geral_BSB" data-href="31_Obadias_Visao_Geral_BSB" href="31_Obadias_Visao_Geral_BSB" class="internal-link" rel="noopener nofollow">Visão Geral BSB</a></strong><br>
+Obadias apresenta uma mensagem profética contra Edom, destacando o julgamento de Deus sobre seu orgulho, sua violência e sua traição contra Judá. O livro anuncia a queda dos edomitas e afirma que suas próprias ações retornariam sobre eles. Ao final, promete livramento e restauração a Israel e declara que o reino pertencerá ao SENHOR.</p>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="31_Obadias_Visão_Geral_Willmington" data-href="31_Obadias_Visão_Geral_Willmington" href="31_Obadias_Visão_Geral_Willmington" class="internal-link" rel="noopener nofollow">Visão Geral Willmington</a></strong><br>
+Este livro registra a profecia de Obadias sobre a destruição da nação de Edom por causa de sua crueldade e traição contra Israel. Edom e Israel descendiam, respectivamente, de Esaú e Jacó. Os dois grandes pecados dos edomitas foram o orgulho contra Deus e a deslealdade contra seu povo irmão.</p>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="31_Obadias_Resumo_por_Eventos" data-href="31_Obadias_Resumo_por_Eventos" href="31_Obadias_Resumo_por_Eventos" class="internal-link" rel="noopener nofollow">Resumo por Eventos</a></strong></p>
+<ol>
+<li dir="auto"><strong>O julgamento de Edom (1:1–14)</strong></li>
+<li dir="auto"><strong>O Dia do SENHOR para todas as nações (1:15–21)</strong></li>
+</ol>
+<p dir="auto"><strong><a data-tooltip-position="top" aria-label="30_Amos" data-href="30_Amos" href="30_Amos" class="internal-link" rel="noopener nofollow">Amós &lt; VOLTAR</a> | <a data-tooltip-position="top" aria-label="32_Jonas" data-href="32_Jonas" href="32_Jonas" class="internal-link" rel="noopener nofollow">AVANÇAR &gt; Jonas</a></strong></p>
+    <script>
+      (function () {
+        var STORAGE_KEY = "export-theme";
+        var LEGACY_KEY = "theme";
+        var body = document.body;
+        var button = document.getElementById("theme-toggle");
+        if (!body || !button) return;
+
+        function loadSavedTheme() {
+          try {
+            var saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+            localStorage.setItem(LEGACY_KEY, theme);
+          } catch (e) {}
+        }
+
+        function applyTheme(theme) {
+          body.setAttribute("data-theme", theme);
+          saveTheme(theme);
+        }
+
+        var currentTheme = loadSavedTheme();
+        applyTheme(currentTheme);
+
+        button.addEventListener("click", function () {
+          currentTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(currentTheme);
+        });
+      })();
+    </script>
+  </body>
+</html>

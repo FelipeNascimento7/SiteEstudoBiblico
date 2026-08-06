@@ -1,0 +1,371 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECURSOS CANVA.md | Exported</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .theme-toggle {
+        position: absolute;
+        z-index: 9999;
+        border: none;
+        background: var(--bgColor-muted);
+        color: var(--fgColor-muted);
+        border-radius: 8px;
+        border: 1px solid var(--borderColor-default);
+        padding: 6px 5px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      /* Computador */
+      @media (min-width: 768px) {
+        .theme-toggle {
+          top: 45px;
+          right: 230px;
+        }
+      }
+
+      /* Celular */
+      @media (max-width: 767px) {
+        .theme-toggle {
+          top: 15px;
+          right: 15px;
+          font-size: 12px;
+          padding: 5px 8px;
+        }
+      }
+    </style>
+  </head>
+  <body class="markdown-body" data-theme="light">
+    <button id="theme-toggle" type="button" class="theme-toggle">Alternar tema</button>
+    <p dir="auto">Assumindo que você quis dizer <strong>Canvas do Obsidian</strong> — o quadro visual nativo, não o site Canva.com — estes são os principais recursos nativos disponíveis.</p>
+<h2 data-heading="1. O que é o Canvas no Obsidian" dir="auto" id="1.-O-que-é-o-Canvas-no-Obsidian">1. O que é o Canvas no Obsidian</h2>
+<p dir="auto">O <strong>Canvas</strong> é um plugin core do Obsidian para organização visual de notas. Ele permite montar um espaço 2D/infinito com notas, arquivos, anexos, páginas da web, conexões e grupos. Os arquivos Canvas são salvos com extensão <strong><code>.canvas</code></strong>, usando o formato aberto <strong>JSON Canvas</strong>. (<a data-tooltip-position="top" aria-label="https://obsidian.md/help/plugins/canvas" rel="noopener nofollow" class="external-link" title="Canvas - Obsidian Help" href="https://obsidian.md/help/plugins/canvas" target="_blank">Obsidian</a>)</p>
+<hr>
+<h2 data-heading="2. Criar um Canvas" dir="auto" id="2.-Criar-um-Canvas">2. Criar um Canvas</h2>
+<p dir="auto">Você pode criar um novo Canvas por:</p>
+<ol>
+<li dir="auto">
+<p><strong>Paleta de comandos</strong></p>
+<ul>
+<li dir="auto"><code>Canvas: Create new canvas</code><br>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<p><strong>Explorador de arquivos</strong></p>
+<ul>
+<li dir="auto">Clique direito em uma pasta<br>
+</li>
+<li dir="auto"><code>New canvas</code><br>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<p><strong>Ribbon/barra lateral esquerda</strong></p>
+<ul>
+<li dir="auto">Ícone de criar novo Canvas<br>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 data-heading="3. Tipos de cards que você pode adicionar" dir="auto" id="3.-Tipos-de-cards-que-você-pode-adicionar">3. Tipos de cards que você pode adicionar</h2>
+<p dir="auto">No Canvas, quase tudo é organizado como <strong>cards</strong>.</p>
+<h3 data-heading="3.1 Card de texto" dir="auto" id="3.1-Card-de-texto">3.1 Card de texto</h3>
+<p dir="auto">Card solto, sem ser uma nota do cofre.</p>
+<p dir="auto">Recursos:</p>
+<ul>
+<li dir="auto">escrever texto direto no Canvas;<br>
+</li>
+<li dir="auto">usar Markdown;<br>
+</li>
+<li dir="auto">usar links internos;<br>
+</li>
+<li dir="auto">usar blocos de código;<br>
+</li>
+<li dir="auto">editar com duplo clique;<br>
+</li>
+<li dir="auto">converter o card em uma nota <code>.md</code>.<br>
+</li>
+</ul>
+<p dir="auto">Importante: cards de texto puro <strong>não aparecem nos backlinks</strong>. Para aparecerem, precisam ser convertidos em arquivo/nota. (<a data-tooltip-position="top" aria-label="https://obsidian.md/help/plugins/canvas" rel="noopener nofollow" class="external-link" title="Canvas - Obsidian Help" href="https://obsidian.md/help/plugins/canvas" target="_blank">Obsidian</a>)</p>
+<h3 data-heading="3.2 Card de nota" dir="auto" id="3.2-Card-de-nota">3.2 Card de nota</h3>
+<p dir="auto">Permite adicionar uma nota existente do seu vault ao Canvas.</p>
+<p dir="auto">Você pode adicionar por:</p>
+<ul>
+<li dir="auto">botão de documento no Canvas;<br>
+</li>
+<li dir="auto">menu de contexto;<br>
+</li>
+<li dir="auto">arrastando uma nota do File Explorer.<br>
+</li>
+</ul>
+<h3 data-heading="3.3 Card de mídia" dir="auto" id="3.3-Card-de-mídia">3.3 Card de mídia</h3>
+<p dir="auto">Você pode adicionar mídias do vault, como:</p>
+<ul>
+<li dir="auto">imagens;<br>
+</li>
+<li dir="auto">áudios;<br>
+</li>
+<li dir="auto">PDFs;<br>
+</li>
+<li dir="auto">outros tipos de arquivo reconhecidos ou não reconhecidos.<br>
+</li>
+</ul>
+<h3 data-heading="3.4 Card de página da web" dir="auto" id="3.4-Card-de-página-da-web">3.4 Card de página da web</h3>
+<p dir="auto">Permite embutir uma página web dentro do Canvas.</p>
+<p dir="auto">Recursos:</p>
+<ul>
+<li dir="auto">adicionar uma URL manualmente;<br>
+</li>
+<li dir="auto">arrastar uma URL do navegador para o Canvas;<br>
+</li>
+<li dir="auto">abrir a página no navegador com <code>Ctrl</code>/<code>Cmd</code> + clique ou pelo menu de contexto.<br>
+</li>
+</ul>
+<h3 data-heading="3.5 Card a partir de pastas" dir="auto" id="3.5-Card-a-partir-de-pastas">3.5 Card a partir de pastas</h3>
+<p dir="auto">Você pode arrastar uma pasta do File Explorer para o Canvas. O Obsidian adiciona os arquivos daquela pasta ao quadro.</p>
+<hr>
+<h2 data-heading="4. Edição de cards" dir="auto" id="4.-Edição-de-cards">4. Edição de cards</h2>
+<p dir="auto">Recursos disponíveis:</p>
+<ul>
+<li dir="auto">editar cards de texto e notas com duplo clique;<br>
+</li>
+<li dir="auto">sair da edição clicando fora ou apertando <code>Esc</code>;<br>
+</li>
+<li dir="auto">editar pelo menu de contexto;<br>
+</li>
+<li dir="auto">excluir cards com <code>Backspace</code>, <code>Delete</code> ou pelo botão de remoção;<br>
+</li>
+<li dir="auto">substituir uma nota ou mídia por outra do mesmo tipo usando <strong>Swap file</strong>;<br>
+</li>
+<li dir="auto">rolar o conteúdo interno de um card depois de selecioná-lo.<br>
+</li>
+</ul>
+<hr>
+<h2 data-heading="5. Seleção e organização" dir="auto" id="5.-Seleção-e-organização">5. Seleção e organização</h2>
+<p dir="auto">Você pode:</p>
+<ul>
+<li dir="auto">selecionar um card individual;<br>
+</li>
+<li dir="auto">arrastar uma caixa de seleção sobre vários cards;<br>
+</li>
+<li dir="auto">adicionar/remover cards da seleção com <code>Shift</code>;<br>
+</li>
+<li dir="auto">selecionar tudo com <code>Ctrl+A</code> ou <code>Cmd+A</code>;<br>
+</li>
+<li dir="auto">mover cards livremente;<br>
+</li>
+<li dir="auto">duplicar uma seleção com <code>Alt</code> ou <code>Option</code> enquanto arrasta;<br>
+</li>
+<li dir="auto">mover apenas em uma direção segurando <code>Shift</code>;<br>
+</li>
+<li dir="auto">desativar o encaixe/snap segurando <code>Space</code>;<br>
+</li>
+<li dir="auto">trazer um card para frente ao selecioná-lo.<br>
+</li>
+</ul>
+<hr>
+<h2 data-heading="6. Redimensionamento" dir="auto" id="6.-Redimensionamento">6. Redimensionamento</h2>
+<p dir="auto">Você pode redimensionar cards arrastando suas bordas.</p>
+<p dir="auto">Atalhos úteis:</p>
+<ul>
+<li dir="auto"><code>Space</code> durante o redimensionamento: desativa o snap;<br>
+</li>
+<li dir="auto"><code>Shift</code> durante o redimensionamento: mantém a proporção do card.<br>
+</li>
+</ul>
+<hr>
+<h2 data-heading="7. Conexões entre cards" dir="auto" id="7.-Conexões-entre-cards">7. Conexões entre cards</h2>
+<p dir="auto">O Canvas permite criar linhas entre cards para representar relações.</p>
+<p dir="auto">Recursos:</p>
+<ul>
+<li dir="auto">conectar dois cards com uma linha direcionada;<br>
+</li>
+<li dir="auto">criar uma conexão arrastando a bolinha na borda de um card;<br>
+</li>
+<li dir="auto">criar um novo card a partir de uma conexão solta;<br>
+</li>
+<li dir="auto">desconectar dois cards;<br>
+</li>
+<li dir="auto">remover uma conexão;<br>
+</li>
+<li dir="auto">reconectar uma linha a outro card;<br>
+</li>
+<li dir="auto">navegar até a origem ou destino da conexão;<br>
+</li>
+<li dir="auto">adicionar rótulo/label à conexão;<br>
+</li>
+<li dir="auto">editar o label da conexão;<br>
+</li>
+<li dir="auto">mudar a cor da conexão.<br>
+</li>
+</ul>
+<hr>
+<h2 data-heading="8. Cores" dir="auto" id="8.-Cores">8. Cores</h2>
+<p dir="auto">Você pode alterar a cor de:</p>
+<ul>
+<li dir="auto">cards;<br>
+</li>
+<li dir="auto">conexões/linhas.<br>
+</li>
+</ul>
+<p dir="auto">Isso ajuda a criar categorias visuais, prioridades, status ou tipos de relacionamento.</p>
+<hr>
+<h2 data-heading="9. Grupos" dir="auto" id="9.-Grupos">9. Grupos</h2>
+<p dir="auto">O Canvas possui grupos para organizar visualmente cards relacionados.</p>
+<p dir="auto">Recursos:</p>
+<ul>
+<li dir="auto">criar grupo vazio;<br>
+</li>
+<li dir="auto">criar grupo a partir de cards selecionados;<br>
+</li>
+<li dir="auto">mover cards dentro de grupos;<br>
+</li>
+<li dir="auto">renomear grupo com duplo clique no nome;<br>
+</li>
+<li dir="auto">usar grupos como áreas visuais para separar temas, etapas, módulos ou ideias.<br>
+</li>
+</ul>
+<hr>
+<h2 data-heading="10. Navegação no Canvas" dir="auto" id="10.-Navegação-no-Canvas">10. Navegação no Canvas</h2>
+<h3 data-heading="10.1 Pan/mover a tela" dir="auto" id="10.1-Pan/mover-a-tela">10.1 Pan/mover a tela</h3>
+<p dir="auto">Você pode navegar pelo quadro usando:</p>
+<ul>
+<li dir="auto"><code>Space</code> + arrastar;<br>
+</li>
+<li dir="auto">botão do meio do mouse;<br>
+</li>
+<li dir="auto">scroll do mouse para mover verticalmente;<br>
+</li>
+<li dir="auto"><code>Shift</code> + scroll para mover horizontalmente.<br>
+</li>
+</ul>
+<h3 data-heading="10.2 Zoom" dir="auto" id="10.2-Zoom">10.2 Zoom</h3>
+<p dir="auto">Você pode aproximar ou afastar com:</p>
+<ul>
+<li dir="auto"><code>Space</code> + scroll;<br>
+</li>
+<li dir="auto"><code>Ctrl</code>/<code>Cmd</code> + scroll;<br>
+</li>
+<li dir="auto">botões de zoom no canto superior direito.<br>
+</li>
+</ul>
+<h3 data-heading="10.3 Zoom to fit" dir="auto" id="10.3-Zoom-to-fit">10.3 Zoom to fit</h3>
+<p dir="auto">Mostra todos os itens do Canvas na tela.</p>
+<p dir="auto">Atalho:</p>
+<pre class="language-text"><code class="language-text is-loaded">Shift + 1
+</code></pre>
+<h3 data-heading="10.4 Zoom to selection" dir="auto" id="10.4-Zoom-to-selection">10.4 Zoom to selection</h3>
+<p dir="auto">Ajusta o zoom para mostrar apenas os itens selecionados.</p>
+<p dir="auto">Atalho:</p>
+<pre class="language-text"><code class="language-text is-loaded">Shift + 2
+</code></pre>
+<h3 data-heading="10.5 Reset zoom" dir="auto" id="10.5-Reset-zoom">10.5 Reset zoom</h3>
+<p dir="auto">Volta o zoom ao nível padrão.</p>
+<hr>
+<h2 data-heading="11. Embed de Canvas em notas" dir="auto" id="11.-Embed-de-Canvas-em-notas">11. Embed de Canvas em notas</h2>
+<p dir="auto">Você pode incorporar um Canvas dentro de uma nota usando a sintaxe padrão de embed do Obsidian.</p>
+<p dir="auto">Exemplo:</p>
+<pre class="language-markdown"><code class="language-markdown is-loaded">![[Meu Canvas.canvas]]
+</code></pre>
+<hr>
+<h2 data-heading="12. Formato de arquivo" dir="auto" id="12.-Formato-de-arquivo">12. Formato de arquivo</h2>
+<p dir="auto">Cada Canvas é salvo como arquivo:</p>
+<pre class="language-text"><code class="language-text is-loaded">nome-do-canvas.canvas
+</code></pre>
+<p dir="auto">Internamente, ele usa o formato aberto <strong>JSON Canvas</strong>, o que permite que outros aplicativos ou plugins leiam e manipulem esse tipo de arquivo. (<a data-tooltip-position="top" aria-label="https://obsidian.md/help/plugins/canvas" rel="noopener nofollow" class="external-link" title="Canvas - Obsidian Help" href="https://obsidian.md/help/plugins/canvas" target="_blank">Obsidian</a>)</p>
+<hr>
+<h2 data-heading="13. Resumo geral dos recursos" dir="auto" id="13.-Resumo-geral-dos-recursos">13. Resumo geral dos recursos</h2>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Recursos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criação</td>
+<td>novo Canvas pela paleta, ribbon ou explorador</td>
+</tr>
+<tr>
+<td>Cards</td>
+<td>texto, notas, mídias, PDFs, áudio, web pages, arquivos de pasta</td>
+</tr>
+<tr>
+<td>Texto</td>
+<td>Markdown, links, código, conversão para nota</td>
+</tr>
+<tr>
+<td>Organização</td>
+<td>mover, duplicar, redimensionar, selecionar múltiplos cards</td>
+</tr>
+<tr>
+<td>Conexões</td>
+<td>linhas direcionadas, labels, reconexão, remoção, navegação origem/destino</td>
+</tr>
+<tr>
+<td>Visual</td>
+<td>cores em cards e conexões</td>
+</tr>
+<tr>
+<td>Grupos</td>
+<td>criar, agrupar cards, renomear, organizar áreas</td>
+</tr>
+<tr>
+<td>Navegação</td>
+<td>pan, zoom, zoom to fit, zoom to selection, reset zoom</td>
+</tr>
+<tr>
+<td>Integração</td>
+<td>embed de Canvas em notas</td>
+</tr>
+<tr>
+<td>Arquivo</td>
+<td><code>.canvas</code> em formato JSON Canvas</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">Se você estava falando do <strong>Canva.com integrado ao Obsidian</strong>, não do <strong>Canvas nativo</strong>, aí a resposta muda: o Obsidian não tem uma integração nativa oficial equivalente ao Canva; normalmente a pessoa usa links, embeds web, imagens exportadas ou plugins da comunidade.</p>
+    <script>
+      (function () {
+        var STORAGE_KEY = "export-theme";
+        var LEGACY_KEY = "theme";
+        var body = document.body;
+        var button = document.getElementById("theme-toggle");
+        if (!body || !button) return;
+
+        function loadSavedTheme() {
+          try {
+            var saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+            if (saved === "dark" || saved === "light") return saved;
+          } catch (e) {}
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        function saveTheme(theme) {
+          try {
+            localStorage.setItem(STORAGE_KEY, theme);
+            localStorage.setItem(LEGACY_KEY, theme);
+          } catch (e) {}
+        }
+
+        function applyTheme(theme) {
+          body.setAttribute("data-theme", theme);
+          saveTheme(theme);
+        }
+
+        var currentTheme = loadSavedTheme();
+        applyTheme(currentTheme);
+
+        button.addEventListener("click", function () {
+          currentTheme = currentTheme === "dark" ? "light" : "dark";
+          applyTheme(currentTheme);
+        });
+      })();
+    </script>
+  </body>
+</html>
